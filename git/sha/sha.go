@@ -12,6 +12,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 package sha
 
 import (
@@ -23,7 +24,7 @@ import (
 	"strings"
 )
 
-// SHA represents a git sha.
+// SHA represents a git SHA.
 type SHA struct {
 	str string
 }
@@ -32,11 +33,6 @@ type SHA struct {
 const EmptyTree = "4b825dc642cb6eb9a060e54bf8d69288fbee4904"
 
 var (
-	// Nil represents a nil SHA value.
-	Nil = Must("0000000000000000000000000000000000000000")
-	// None represents an empty SHA value.
-	None = SHA{}
-	// validSHARegex defines the valid SHA format accepted by Git (full form and short forms).
 	validSHARegex = regexp.MustCompile("^[0-9a-f]{4,64}$")
 	nilRegex      = regexp.MustCompile("^0{4,64}$")
 )
